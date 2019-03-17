@@ -20,7 +20,7 @@ class SongsController < ApplicationController
     @song.genres << Genre.find_by_id(params[:genres])
     @song.save
     # binding.pry
-    redirect 'songs/#{@song.slug}>'
+    redirect 'songs/<%=@song.slug%>'
   end
   #
   # post 'songs/new' do
