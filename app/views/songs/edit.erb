@@ -7,7 +7,7 @@
       <br>
       <label>Choose an Existing Genre:</label>
           <% @genres.each do |genre| %>
-          <input type="checkbox" name="genres[]" value="<%=genre.id%>" id="<%=genre.name%>" <%='checked' if @song.genres.include?(genre) %>>  <%=genre.name%></input>
+          <input type="checkbox" name="genres[]" value="<%=genre.id%>" id="<%=genre.name%>">  <%=genre.name%></input>
           <%end%>
     <input type="submit" value="submit" id="Create">
 </form>
