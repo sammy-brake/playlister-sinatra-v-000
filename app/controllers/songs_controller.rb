@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
-    @genres = Genre.all.uniq
+    @genres = Genre.all
     ##########@songs=Song.all
     erb :'songs/new'
   end
