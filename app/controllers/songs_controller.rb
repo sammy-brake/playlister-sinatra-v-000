@@ -41,7 +41,7 @@ class SongsController < ApplicationController
 
   get '/songs/:slug/edit' do
 
-    @genres = Genre.all
+    @genres = Genre.all.uniq
    @song = Song.find_by_slug(params[:slug])
   #  binding.pry
    erb :'songs/edit'
